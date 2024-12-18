@@ -9,7 +9,7 @@
 ## Pages
 
 - [Dashboard](http://localhost:3000)
-- [Applicants](http://localhost:3000/dashboard/customers)
+- [Applications](http://localhost:3000/dashboard/customers)
 - [Integrations](http://localhost:3000/dashboard/integrations)
 - [Settings](http://localhost:3000/dashboard/settings)
 - [Account](http://localhost:3000/dashboard/account)

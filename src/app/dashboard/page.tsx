@@ -12,12 +12,18 @@ import { TasksProgress } from '@/components/dashboard/overview/tasks-progress';
 import { TotalApplicants } from '@/components/dashboard/overview/total-applicants';
 import { TotalRoles } from '@/components/dashboard/overview/total-roles';
 import { Traffic } from '@/components/dashboard/overview/traffic';
+import { TrendFilter } from '@/components/dashboard/overview/trend-filter';
 
 export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } satisfies Metadata;
 
 export default function Page(): React.JSX.Element {
   return (
     <Grid container spacing={3}>
+      <Grid lg={12} sm={12} xs={12}>
+        {' '}
+        <TrendFilter />
+      </Grid>
+
       <Grid lg={3} sm={6} xs={12}>
         <Budget diff={7} trend="down" sx={{ height: '100%' }} value="15 days" />
       </Grid>
