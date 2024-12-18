@@ -40,7 +40,11 @@ export default function Page(): React.JSX.Element {
         />
       </Grid>
       <Grid lg={4} md={6} xs={12}>
-        <Traffic chartSeries={[63, 15, 22]} labels={['Desktop', 'Tablet', 'Phone']} sx={{ height: '100%' }} />
+        <Traffic
+          chartSeries={[25, 15, 20, 30, 10]}
+          labels={['LinkedIn', 'Glassdoor', 'Indeed', 'Workday', 'Others']}
+          sx={{ height: '100%' }}
+        />
       </Grid>
       <Grid lg={4} md={6} xs={12}>
         <LatestProducts
