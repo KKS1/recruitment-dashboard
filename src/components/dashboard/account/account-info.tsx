@@ -9,8 +9,8 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 const user = {
-  name: 'Sofia Rivers',
-  avatar: '/assets/avatar.png',
+  name: 'Kanwal K',
+  avatar: '/assets/avatar.jpeg',
   jobTitle: 'Senior Developer',
   country: 'USA',
   city: 'Los Angeles',

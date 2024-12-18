@@ -84,10 +84,10 @@ export function SideNav(): React.JSX.Element {
       <Stack spacing={2} sx={{ p: '12px' }}>
         <div>
           <Typography color="var(--mui-palette-neutral-100)" variant="subtitle2">
-            Need more features?
+            Want to connect for hiring?
           </Typography>
           <Typography color="var(--mui-palette-neutral-400)" variant="body2">
-            Check out our Pro solution template.
+            Please reach out for our full recruitment solution.
           </Typography>
         </div>
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -102,12 +102,12 @@ export function SideNav(): React.JSX.Element {
           component="a"
           endIcon={<ArrowSquareUpRightIcon fontSize="var(--icon-fontSize-md)" />}
           fullWidth
-          href="https://material-kit-pro-react.devias.io/"
+          href="https://github.com/KKS1/recruitment-dashboard"
           sx={{ mt: 2 }}
           target="_blank"
           variant="contained"
         >
-          Pro version
+          Github Source Code
         </Button>
       </Stack>
     </Box>
