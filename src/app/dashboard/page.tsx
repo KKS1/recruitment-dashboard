@@ -6,8 +6,8 @@ import dayjs from 'dayjs';
 import { config } from '@/config';
 import { Budget } from '@/components/dashboard/overview/budget';
 import { Hires } from '@/components/dashboard/overview/hires';
+import { LatestHires } from '@/components/dashboard/overview/latest-hires';
 import { LatestOrders } from '@/components/dashboard/overview/latest-orders';
-import { LatestProducts } from '@/components/dashboard/overview/latest-products';
 import { TasksProgress } from '@/components/dashboard/overview/tasks-progress';
 import { TotalApplicants } from '@/components/dashboard/overview/total-applicants';
 import { TotalRoles } from '@/components/dashboard/overview/total-roles';
@@ -53,37 +53,37 @@ export default function Page(): React.JSX.Element {
         />
       </Grid>
       <Grid lg={4} md={6} xs={12}>
-        <LatestProducts
-          products={[
+        <LatestHires
+          hires={[
             {
               id: 'PRD-005',
-              name: 'Soja & Co. Eucalyptus',
-              image: '/assets/product-5.png',
+              name: 'Kanwal K',
+              image: '/assets/avatar.jpeg',
               updatedAt: dayjs().subtract(18, 'minutes').subtract(5, 'hour').toDate(),
             },
             {
               id: 'PRD-004',
-              name: 'Necessaire Body Lotion',
-              image: '/assets/product-4.png',
-              updatedAt: dayjs().subtract(41, 'minutes').subtract(3, 'hour').toDate(),
+              name: 'Sunny M',
+              image: '/assets/avatar-1.png',
+              updatedAt: dayjs().subtract(41, 'hours').subtract(3, 'hour').toDate(),
             },
             {
               id: 'PRD-003',
-              name: 'Ritual of Sakura',
-              image: '/assets/product-3.png',
-              updatedAt: dayjs().subtract(5, 'minutes').subtract(3, 'hour').toDate(),
+              name: 'Mike S',
+              image: '/assets/avatar-2.png',
+              updatedAt: dayjs().subtract(5, 'days').subtract(3, 'hour').toDate(),
             },
             {
               id: 'PRD-002',
-              name: 'Lancome Rouge',
-              image: '/assets/product-2.png',
-              updatedAt: dayjs().subtract(23, 'minutes').subtract(2, 'hour').toDate(),
+              name: 'Rob G',
+              image: '/assets/avatar-3.png',
+              updatedAt: dayjs().subtract(10, 'days').subtract(2, 'hour').toDate(),
             },
             {
               id: 'PRD-001',
-              name: 'Erbology Aloe Vera',
-              image: '/assets/product-1.png',
-              updatedAt: dayjs().subtract(10, 'minutes').toDate(),
+              name: 'Molly V',
+              image: '/assets/avatar-4.png',
+              updatedAt: dayjs().subtract(23, 'days').toDate(),
             },
           ]}
           sx={{ height: '100%' }}

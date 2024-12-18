@@ -15,29 +15,29 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/Arr
 import { DotsThreeVertical as DotsThreeVerticalIcon } from '@phosphor-icons/react/dist/ssr/DotsThreeVertical';
 import dayjs from 'dayjs';
 
-export interface Product {
+export interface Hire {
   id: string;
   image: string;
   name: string;
   updatedAt: Date;
 }
 
-export interface LatestProductsProps {
-  products?: Product[];
+export interface LatestHiresProps {
+  hires?: Hire[];
   sx?: SxProps;
 }
 
-export function LatestProducts({ products = [], sx }: LatestProductsProps): React.JSX.Element {
+export function LatestHires({ hires = [], sx }: LatestHiresProps): React.JSX.Element {
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest products" />
+      <CardHeader title="Latest hires" />
       <Divider />
       <List>
-        {products.map((product, index) => (
-          <ListItem divider={index < products.length - 1} key={product.id}>
+        {hires.map((hire, index) => (
+          <ListItem divider={index < hires.length - 1} key={hire.id}>
             <ListItemAvatar>
-              {product.image ? (
-                <Box component="img" src={product.image} sx={{ borderRadius: 1, height: '48px', width: '48px' }} />
+              {hire.image ? (
+                <Box component="img" src={hire.image} sx={{ borderRadius: 1, height: '48px', width: '48px' }} />
               ) : (
                 <Box
                   sx={{
@@ -50,9 +50,9 @@ export function LatestProducts({ products = [], sx }: LatestProductsProps): Reac
               )}
             </ListItemAvatar>
             <ListItemText
-              primary={product.name}
+              primary={hire.name}
               primaryTypographyProps={{ variant: 'subtitle1' }}
-              secondary={`Updated ${dayjs(product.updatedAt).format('MMM D, YYYY')}`}
+              secondary={`On ${dayjs(hire.updatedAt).format('MMM D, YYYY')}`}
               secondaryTypographyProps={{ variant: 'body2' }}
             />
             <IconButton edge="end">
