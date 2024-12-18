@@ -5,9 +5,9 @@ import dayjs from 'dayjs';
 
 import { config } from '@/config';
 import { Budget } from '@/components/dashboard/overview/budget';
+import { Hires } from '@/components/dashboard/overview/hires';
 import { LatestOrders } from '@/components/dashboard/overview/latest-orders';
 import { LatestProducts } from '@/components/dashboard/overview/latest-products';
-import { Sales } from '@/components/dashboard/overview/sales';
 import { TasksProgress } from '@/components/dashboard/overview/tasks-progress';
 import { TotalApplicants } from '@/components/dashboard/overview/total-applicants';
 import { TotalRoles } from '@/components/dashboard/overview/total-roles';
@@ -28,13 +28,13 @@ export default function Page(): React.JSX.Element {
         <TasksProgress sx={{ height: '100%' }} value={68.5} />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TotalRoles sx={{ height: '100%' }} value="52" />
+        <TotalRoles sx={{ height: '100%' }} value="152" />
       </Grid>
       <Grid lg={8} xs={12}>
-        <Sales
+        <Hires
           chartSeries={[
-            { name: 'This year', data: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20] },
-            { name: 'Last year', data: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13] },
+            { name: 'This year', data: [180, 160, 50, 80, 30, 140, 130, 160, 170, 190, 180, 200] },
+            { name: 'Last year', data: [120, 110, 40, 60, 20, 90, 80, 100, 110, 120, 130, 160] },
           ]}
           sx={{ height: '100%' }}
         />

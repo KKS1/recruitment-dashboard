@@ -15,12 +15,12 @@ import type { ApexOptions } from 'apexcharts';
 
 import { Chart } from '@/components/core/chart';
 
-export interface SalesProps {
+export interface HiresProps {
   chartSeries: { name: string; data: number[] }[];
   sx?: SxProps;
 }
 
-export function Sales({ chartSeries, sx }: SalesProps): React.JSX.Element {
+export function Hires({ chartSeries, sx }: HiresProps): React.JSX.Element {
   const chartOptions = useChartOptions();
 
   return (
@@ -31,7 +31,7 @@ export function Sales({ chartSeries, sx }: SalesProps): React.JSX.Element {
             Sync
           </Button>
         }
-        title="Sales"
+        title="Hiring Trend"
       />
       <CardContent>
         <Chart height={350} options={chartOptions} series={chartSeries} type="bar" width="100%" />
@@ -50,8 +50,8 @@ function useChartOptions(): ApexOptions {
   const theme = useTheme();
 
   return {
-    chart: { background: 'transparent', stacked: false, toolbar: { show: false } },
-    colors: [theme.palette.primary.main, alpha(theme.palette.primary.main, 0.25)],
+    chart: { background: 'transparent', stacked: false, toolbar: { show: true } },
+    colors: [theme.palette.info.main, alpha(theme.palette.info.main, 0.25)],
     dataLabels: { enabled: false },
     fill: { opacity: 1, type: 'solid' },
     grid: {
@@ -72,7 +72,7 @@ function useChartOptions(): ApexOptions {
     },
     yaxis: {
       labels: {
-        formatter: (value) => (value > 0 ? `${value}K` : `${value}`),
+        // formatter: (value) => (value > 0 ? `${value}K` : `${value}`),
         offsetX: -10,
         style: { colors: theme.palette.text.secondary },
       },
