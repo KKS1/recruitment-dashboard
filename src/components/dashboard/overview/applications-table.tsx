@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Application } from '@/app/data';
 import { Box, Chip, SxProps } from '@mui/material';
 import { DataGrid, GridColDef, GridRenderCellParams, GridToolbar } from '@mui/x-data-grid';
 import dayjs from 'dayjs';
@@ -15,14 +16,6 @@ const statusMap = {
 
 type StatusType = keyof typeof statusMap;
 
-export interface Application {
-  id: string;
-  name: string;
-  position: string;
-  status: 'applied' | 'screen' | 'interviewing' | 'offer' | 'hired';
-  appliedAt: Date;
-}
-
 export interface ApplicationsProps {
   applications?: Application[];
   pageSize?: number;
@@ -34,12 +27,12 @@ const columns: GridColDef<Application[][number]>[] = [
   {
     field: 'name',
     headerName: 'Applicant name',
-    width: 150,
+    width: 170,
   },
   {
     field: 'position',
     headerName: 'Position',
-    width: 150,
+    width: 170,
   },
   {
     field: 'status',

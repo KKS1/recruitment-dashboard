@@ -12,9 +12,9 @@ const user = {
   name: 'Kanwal K',
   avatar: '/assets/avatar.jpeg',
   jobTitle: 'Senior Developer',
-  country: 'USA',
-  city: 'Los Angeles',
-  timezone: 'GTM-7',
+  country: 'Canada',
+  city: 'Saskatoon/ Toronto',
+  timezone: 'GTM-6',
 } as const;
 
 export function AccountInfo(): React.JSX.Element {

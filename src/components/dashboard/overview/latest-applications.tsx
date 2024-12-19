@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -12,6 +13,8 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/Arr
 import { ApplicationsProps, ApplicationsTable } from './applications-table';
 
 export function LatestApplications({ applications = [], sx }: ApplicationsProps): React.JSX.Element {
+  const router = useRouter();
+
   return (
     <Card sx={sx}>
       <CardHeader title="Latest Active Applications" />
@@ -26,6 +29,9 @@ export function LatestApplications({ applications = [], sx }: ApplicationsProps)
           endIcon={<ArrowRightIcon fontSize="var(--icon-fontSize-md)" />}
           size="small"
           variant="text"
+          onClick={() => {
+            router.push('/dashboard/customers');
+          }}
         >
           View all
         </Button>

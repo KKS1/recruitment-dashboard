@@ -42,7 +42,7 @@ const sources = [
 ];
 
 export function TrendFilter(): React.JSX.Element {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [formValues, setFormValues] = useState<Record<FormValuesKeys, string | number | boolean>>({
     duration: 0,
     role: 0,

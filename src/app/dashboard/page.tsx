@@ -14,6 +14,8 @@ import { TotalRoles } from '@/components/dashboard/overview/total-roles';
 import { Traffic } from '@/components/dashboard/overview/traffic';
 import { TrendFilter } from '@/components/dashboard/overview/trend-filter';
 
+import { applications } from '../data';
+
 export const metadata = { title: `Overview | Dashboard | ${config.site.name}` } satisfies Metadata;
 
 export default function Page(): React.JSX.Element {
@@ -90,60 +92,7 @@ export default function Page(): React.JSX.Element {
         />
       </Grid>
       <Grid lg={8} md={12} xs={12}>
-        <LatestApplications
-          applications={[
-            {
-              id: 'AT-007',
-              name: 'Abraham J',
-              position: 'Software Engineer',
-              status: 'applied',
-              appliedAt: dayjs().subtract(3, 'days').toDate(),
-            },
-            {
-              id: 'AT-006',
-              name: 'Cindy L',
-              position: 'Product Manager',
-              status: 'screen',
-              appliedAt: dayjs().subtract(5, 'days').toDate(),
-            },
-            {
-              id: 'AT-004',
-              name: 'Alexa G',
-              position: 'Designer',
-              status: 'interviewing',
-              appliedAt: dayjs().subtract(7, 'days').toDate(),
-            },
-            {
-              id: 'AT-003',
-              name: 'Anje Keizer',
-              position: 'Sales',
-              status: 'offer',
-              appliedAt: dayjs().subtract(10, 'days').toDate(),
-            },
-            {
-              id: 'AT-002',
-              name: 'Clarke Gillebert',
-              position: 'Marketing',
-              status: 'hired',
-              appliedAt: dayjs().subtract(13, 'days').toDate(),
-            },
-            {
-              id: 'AT-001',
-              name: 'Adam Denisov',
-              position: 'Software Engineer',
-              status: 'interviewing',
-              appliedAt: dayjs().subtract(15, 'days').toDate(),
-            },
-            {
-              id: 'AT-000',
-              name: 'Maven G',
-              position: 'Sales',
-              status: 'offer',
-              appliedAt: dayjs().subtract(18, 'days').toDate(),
-            },
-          ]}
-          sx={{ height: '100%' }}
-        />
+        <LatestApplications applications={applications.slice(0, 7)} sx={{ height: '100%' }} />
       </Grid>
     </Grid>
   );
