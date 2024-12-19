@@ -51,5 +51,6 @@ Within the download you'll find the following directories and files:
 		├── layout.tsx
 		├── page.tsx
 		├── auth
-		└── dashboard
+    ├── dashboard
+		└── data
 ```

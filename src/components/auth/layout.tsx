@@ -50,7 +50,7 @@ export function Layout({ children }: LayoutProps): React.JSX.Element {
               </Box>
             </Typography>
             <Typography align="center" variant="subtitle1">
-              A professional template that comes with ready-to-use MUI components.
+              A full transparent system for entire recruitment pipeline and metrics under one window.
             </Typography>
           </Stack>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
