@@ -6,8 +6,8 @@ import dayjs from 'dayjs';
 import { config } from '@/config';
 import { Budget } from '@/components/dashboard/overview/budget';
 import { Hires } from '@/components/dashboard/overview/hires';
+import { LatestApplications } from '@/components/dashboard/overview/latest-applications';
 import { LatestHires } from '@/components/dashboard/overview/latest-hires';
-import { LatestOrders } from '@/components/dashboard/overview/latest-orders';
 import { TasksProgress } from '@/components/dashboard/overview/tasks-progress';
 import { TotalApplicants } from '@/components/dashboard/overview/total-applicants';
 import { TotalRoles } from '@/components/dashboard/overview/total-roles';
@@ -90,49 +90,56 @@ export default function Page(): React.JSX.Element {
         />
       </Grid>
       <Grid lg={8} md={12} xs={12}>
-        <LatestOrders
-          orders={[
+        <LatestApplications
+          applications={[
             {
-              id: 'ORD-007',
-              customer: { name: 'Ekaterina Tankova' },
-              amount: 30.5,
-              status: 'pending',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-007',
+              name: 'Abraham J',
+              position: 'Software Engineer',
+              status: 'applied',
+              appliedAt: dayjs().subtract(3, 'days').toDate(),
             },
             {
-              id: 'ORD-006',
-              customer: { name: 'Cao Yu' },
-              amount: 25.1,
-              status: 'delivered',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-006',
+              name: 'Cindy L',
+              position: 'Product Manager',
+              status: 'screen',
+              appliedAt: dayjs().subtract(5, 'days').toDate(),
             },
             {
-              id: 'ORD-004',
-              customer: { name: 'Alexa Richardson' },
-              amount: 10.99,
-              status: 'refunded',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-004',
+              name: 'Alexa G',
+              position: 'Designer',
+              status: 'interviewing',
+              appliedAt: dayjs().subtract(7, 'days').toDate(),
             },
             {
-              id: 'ORD-003',
-              customer: { name: 'Anje Keizer' },
-              amount: 96.43,
-              status: 'pending',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-003',
+              name: 'Anje Keizer',
+              position: 'Sales',
+              status: 'offer',
+              appliedAt: dayjs().subtract(10, 'days').toDate(),
             },
             {
-              id: 'ORD-002',
-              customer: { name: 'Clarke Gillebert' },
-              amount: 32.54,
-              status: 'delivered',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-002',
+              name: 'Clarke Gillebert',
+              position: 'Marketing',
+              status: 'hired',
+              appliedAt: dayjs().subtract(13, 'days').toDate(),
             },
             {
-              id: 'ORD-001',
-              customer: { name: 'Adam Denisov' },
-              amount: 16.76,
-              status: 'delivered',
-              createdAt: dayjs().subtract(10, 'minutes').toDate(),
+              id: 'AT-001',
+              name: 'Adam Denisov',
+              position: 'Software Engineer',
+              status: 'interviewing',
+              appliedAt: dayjs().subtract(15, 'days').toDate(),
+            },
+            {
+              id: 'AT-000',
+              name: 'Maven G',
+              position: 'Sales',
+              status: 'offer',
+              appliedAt: dayjs().subtract(18, 'days').toDate(),
             },
           ]}
           sx={{ height: '100%' }}

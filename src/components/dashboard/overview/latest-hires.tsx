@@ -30,7 +30,7 @@ export interface LatestHiresProps {
 export function LatestHires({ hires = [], sx }: LatestHiresProps): React.JSX.Element {
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest hires" />
+      <CardHeader title="Latest Hires" />
       <Divider />
       <List>
         {hires.map((hire, index) => (

@@ -1,3 +1,5 @@
+// 'use client';
+
 import * as React from 'react';
 import type { Metadata } from 'next';
 import Button from '@mui/material/Button';
@@ -12,6 +14,7 @@ import { config } from '@/config';
 import { CustomersFilters } from '@/components/dashboard/customer/customers-filters';
 import { CustomersTable } from '@/components/dashboard/customer/customers-table';
 import type { Customer } from '@/components/dashboard/customer/customers-table';
+import { ApplicationsTable } from '@/components/dashboard/overview/applications-table';
 
 export const metadata = { title: `Customers | Dashboard | ${config.site.name}` } satisfies Metadata;
 
@@ -120,27 +123,62 @@ export default function Page(): React.JSX.Element {
       <Stack direction="row" spacing={3}>
         <Stack spacing={1} sx={{ flex: '1 1 auto' }}>
           <Typography variant="h4">Applications</Typography>
-          <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <Button color="inherit" startIcon={<UploadIcon fontSize="var(--icon-fontSize-md)" />}>
-              Import
-            </Button>
-            <Button color="inherit" startIcon={<DownloadIcon fontSize="var(--icon-fontSize-md)" />}>
-              Export
-            </Button>
-          </Stack>
         </Stack>
-        <div>
-          <Button startIcon={<PlusIcon fontSize="var(--icon-fontSize-md)" />} variant="contained">
-            Add
-          </Button>
-        </div>
       </Stack>
-      <CustomersFilters />
-      <CustomersTable
-        count={paginatedCustomers.length}
-        page={page}
-        rows={paginatedCustomers}
-        rowsPerPage={rowsPerPage}
+      <ApplicationsTable
+        pageSize={10}
+        applications={[
+          {
+            id: 'AT-007',
+            name: 'Abraham J',
+            position: 'Software Engineer',
+            status: 'applied',
+            appliedAt: dayjs().subtract(3, 'days').toDate(),
+          },
+          {
+            id: 'AT-006',
+            name: 'Cindy L',
+            position: 'Product Manager',
+            status: 'screen',
+            appliedAt: dayjs().subtract(5, 'days').toDate(),
+          },
+          {
+            id: 'AT-004',
+            name: 'Alexa G',
+            position: 'Designer',
+            status: 'interviewing',
+            appliedAt: dayjs().subtract(7, 'days').toDate(),
+          },
+          {
+            id: 'AT-003',
+            name: 'Anje Keizer',
+            position: 'Sales',
+            status: 'offer',
+            appliedAt: dayjs().subtract(10, 'days').toDate(),
+          },
+          {
+            id: 'AT-002',
+            name: 'Clarke Gillebert',
+            position: 'Marketing',
+            status: 'hired',
+            appliedAt: dayjs().subtract(13, 'days').toDate(),
+          },
+          {
+            id: 'AT-001',
+            name: 'Adam Denisov',
+            position: 'Software Engineer',
+            status: 'interviewing',
+            appliedAt: dayjs().subtract(15, 'days').toDate(),
+          },
+          {
+            id: 'AT-000',
+            name: 'Maven G',
+            position: 'Sales',
+            status: 'offer',
+            appliedAt: dayjs().subtract(18, 'days').toDate(),
+          },
+        ]}
+        sx={{ height: '100%' }}
       />
     </Stack>
   );
