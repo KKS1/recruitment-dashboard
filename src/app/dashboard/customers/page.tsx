@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { config } from '@/config';
 import { ApplicationsTable } from '@/components/dashboard/overview/applications-table';
 
-export const metadata = { title: `Customers | Dashboard | ${config.site.name}` } satisfies Metadata;
+export const metadata = { title: `Applications | Dashboard | ${config.site.name}` } satisfies Metadata;
 
 export default function Page(): React.JSX.Element {
   return (
