@@ -10,7 +10,6 @@
 
 - [Dashboard](http://localhost:3000)
 - [Applications](http://localhost:3000/dashboard/customers)
-- [Integrations](http://localhost:3000/dashboard/integrations)
 - [Settings](http://localhost:3000/dashboard/settings)
 - [Account](http://localhost:3000/dashboard/account)
 - [Sign In](http://localhost:3000/auth/sign-in)
