@@ -2,7 +2,9 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[![Recruitment Dashboard - React](https://github.com/devias-io/material-kit-react/blob/main/public/assets/thumbnail.png)](http://localhost:3000/)
+[![Recruitment Dashboard 1 - React](https://github.com/KKS1/recruitment-dashboard/blob/main/public/assets/screenshot-1.png)](http://localhost:3000/)
+[![Recruitment Dashboard 2- React](https://github.com/KKS1/recruitment-dashboard/blob/main/public/assets/screenshot-2.png)](http://localhost:3000/)
+[![Recruitment Dashboard 3- React](https://github.com/KKS1/recruitment-dashboard/blob/main/public/assets/screenshot-3.png)](http://localhost:3000/)
 
 > Recruitment React Admin Dashboard made with [MUI's](https://mui.com) components, [React](https://reactjs.org) and of course [Next.js](https://github.com/vercel/next.js) to boost your app development process!
 
